@@ -403,38 +403,6 @@ def generate_quiz(request):
 
     return JsonResponse({"error": "Only POST method allowed"}, status=405)
 
-
-# @csrf_exempt
-# def submit_quiz(request):
-#     if request.method == 'POST':
-#         try:
-#             data = json.loads(request.body)  # Get the request body
-
-#             user_answers = data.get("answers")  # User's answers
-#             quiz = data.get("quiz")  # The quiz questions
-
-#             if not quiz:
-#                 return JsonResponse({"error": "No quiz found"}, status=400)
-
-#             # Initialize score
-#             score = 0
-#             # Loop through each question and check if the answer is correct
-#             for idx, q in enumerate(quiz['questions']):
-#                 if q["answer"] == user_answers.get(str(idx)):
-#                     score += 1
-
-#             # Return the score and total number of questions
-#             return JsonResponse({
-#                 "score": score,
-#                 "total": len(quiz['questions'])
-#             })
-
-#         except Exception as e:
-#             return JsonResponse({"error": str(e)}, status=500)
-
-#     return JsonResponse({"error": "Only POST method allowed"}, status=405)
-
-
 @csrf_exempt
 def submit_quiz(request):
     if request.method == 'POST':
