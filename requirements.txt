@@ -1,11 +1,10 @@
-Django>=4.2
+asgiref
+djangorestframework
+django
 gunicorn
 python-dotenv
 google-generativeai
-djangorestframework
-asgiref
 sqlparse
 packaging
 typing-extensions
-gunicorn==20.1.0
 django-cors-headers
