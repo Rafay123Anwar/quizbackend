@@ -141,4 +141,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     "http://localhost:3000",  # Vite React frontend
 # ]
 
-CORS_ALLOW_ALL_ORIGINS = True 
+# CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOWED_ORIGINS = [
+    "https://quizbackend-black.vercel.app",
+    "http://localhost:3000",
+    # Add other frontend URLs as needed
+]
