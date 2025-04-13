@@ -8,3 +8,4 @@ sqlparse
 packaging
 typing-extensions
 gunicorn==20.1.0
+django-cors-headers
