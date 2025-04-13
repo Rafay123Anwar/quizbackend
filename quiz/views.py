@@ -399,6 +399,7 @@ def generate_quiz(request):
                 return JsonResponse({"raw_text": content, "error": "Could not parse response as JSON"}, status=500)
 
         except Exception as e:
+            print("Error occurred:", str(e))  # Log error on the server
             return JsonResponse({"error": str(e)}, status=500)
 
     return JsonResponse({"error": "Only POST method allowed"}, status=405)
