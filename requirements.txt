@@ -1,3 +1,9 @@
 Django>=4.2
 gunicorn
 python-dotenv
+google-generativeai
+djangorestframework
+asgiref
+sqlparse
+packaging
+typing-extensions
